@@ -1,0 +1,71 @@
+h1,
+h2,
+h3,
+h4,
+h5, {
+  @include trailer;
+  font: {
+    family: Cambria, serif;
+    weight: 300;
+  }
+  @include transition(all, 500ms);
+  color: lighten(black, 20%);
+}
+
+h1 {
+  @include adjust-font-size-to(42px);
+  @include trailer(1, 42px);
+}
+
+h2 {
+  @include adjust-font-size-to(32px);
+  @include trailer(1, 32px);
+}
+
+h3 {
+  @include adjust-font-size-to(22px);
+  @include trailer(1, 22px);
+}
+
+h4 {
+  @include adjust-font-size-to(18px);
+  @include trailer(1, 18px);
+}
+
+h5 {
+  @include adjust-font-size-to(16px);
+  @include trailer(1, 16px);
+  font-style: italic;
+}
+
+p {
+  @include adjust-font-size-to(18px);
+  @include trailer(1, 18px);
+  color: lighten(black, 30%);
+  font: {
+    family: Cambria, serif;
+    weight: 300;
+  }
+  +p {
+    text-indent: 1em;
+  }
+}
+
+ul {
+  @include trailer(1);
+  padding-left: 2em;
+  li {
+    list-style: disc;
+    font-style: italic;
+    color: lighten(black, 50%);
+    font: {
+      family: Cambria, serif;
+      weight: 300;
+    }
+  }
+}
+
+a,
+a:visited {
+  color: #e54a4f;
+}

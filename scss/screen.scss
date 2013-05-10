@@ -1,0 +1,52 @@
+
+@import "compass/reset";
+@import "base";
+
+/**
+ * Grid
+ */
+
+ $total-cols       : 12;
+ $col-width        : 4em;
+ $gutter-width     : 1em;
+ $side-gutter-width: $gutter-width;
+
+ @include establish-baseline;
+
+ html {
+ 	text-rendering: optimizeLegibility;
+ 	-webkit-font-smoothing: antialiased;
+ 	-webkit-text-size-adjust: 100%;
+ 	-ms-text-size-adjust: 100%;
+ }
+
+
+/**
+ * Layout
+ */
+
+ div[role="main"] {
+ 	@include container;
+ 	@include padding-leader;
+ 	padding: 4em rhythm(0.5);
+ 	@include transition(all, 500ms);
+ 	div {
+ 		@include span-columns(6, 12);
+ 		@media screen and (max-width: 60em) {
+ 			@include span-columns(12, 12);
+ 		}
+ 		&:nth-child(1) {
+ 			@include omega;
+ 		}
+ 	}
+
+ 	p {
+ 		@include trailer;
+ 	}
+ 	@media (max-width: 60em) {
+ 		max-width: 80%;
+ 	}
+
+ }
+
+ @import "type";

@@ -1,0 +1,22 @@
+// Imports -------------------------------------------------------------------
+
+@import "compass";
+@import "compass/layout";
+@import "susy";
+
+// Settings ------------------------------------------------------------------
+
+$legacy-support-for-ie6: false;
+$legacy-support-for-ie7: false !default;
+$legacy-support-for-ie8: false !default;
+$ie: false !default;
+
+$show-column-grid-backgrounds: false;
+$show-baseline-grid-backgrounds: true;
+$show-grid-backgrounds: true;
+$grid-background-baseline-color: rgba(magenta, 0.2);
+
+// Font Sizes ----------------------------------------------------------------
+
+$base-font-size: 24px;
+$base-line-height: $base-font-size * 1.5;

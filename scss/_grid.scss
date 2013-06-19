@@ -1,0 +1,19 @@
+// Grid
+$total-cols                    : 12;
+$col-width                     : 4em;
+$gutter-width                  : 1em;
+$container-width               : 70em;
+$side-gutter-width             : $gutter-width;
+$show-column-grid-backgrounds  : true;
+$show-baseline-grid-backgrounds: true;
+$show-grid-backgrounds         : true;
+$grid-background-baseline-color: rgba(red, .05);
+$grid-background-column-color  : rgba(red, .05);
+$round-to-nearest-half-line    : false;
+
+$base-font-size                : 16px;
+$base-line-height              : $base-font-size * 1.5;
+
+@import 'http://basehold.it/24/ff0000';
+
+@include establish-baseline;

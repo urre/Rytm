@@ -71,21 +71,6 @@ blockquote {
   }
 }
 
-// blockquote {
-//   line-height: normal;
-//   @include adjust-font-size-to(20px);
-//   margin: rhythm(1, 20px) 0 rhythm(3, 20px) 0; //  3 lines above, 3 lines below
-
-//   p {
-//     @include adjust-font-size-to(20px);
-//       font: {
-//         family: Cambria, serif;
-//         weight: 300;
-//         style: italic;
-//       }
-//   }
-// }
-
 p,
 pre,
 label {

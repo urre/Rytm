@@ -1,46 +1,49 @@
+// Montserrat from Google Fonts
+@import url('http://fonts.googleapis.com/css?family=Montserrat');
+$montserrat: 'Montserrat', sans-serif;
+
 h1,
 h2,
 h3,
 h4,
 h5, {
-  @include trailer;
   font: {
-    family: Cambria, serif;
+    family: $montserrat, sans-serif;
     weight: 300;
   }
   @include transition(all, 500ms);
-  color: lighten(black, 20%);
+  color: lighten(black, 30%);
 }
 
 h1 {
   @include adjust-font-size-to(42px);
-  @include trailer(1, 42px);
+  @include rhythm(0,0,0,1,42px);
 }
 
 h2 {
   @include adjust-font-size-to(32px);
-  @include trailer(1, 32px);
+  @include rhythm(0,0,0,1,32px);
 }
 
 h3 {
   @include adjust-font-size-to(22px);
-  @include trailer(1, 22px);
+  @include rhythm(0,0,0,1,22px);
 }
 
 h4 {
   @include adjust-font-size-to(18px);
-  @include trailer(1, 18px);
+  @include rhythm(0,0,0,1,18px);
 }
 
 h5 {
   @include adjust-font-size-to(16px);
-  @include trailer(1, 16px);
+  @include rhythm(0,0,0,1, 16px);
   font-style: italic;
 }
 
 p {
-  @include adjust-font-size-to(18px);
-  @include trailer(1, 18px);
+  @include adjust-font-size-to(18px, 4);
+  @include rhythm(0,0,0,2,18px);
   color: lighten(black, 30%);
   font: {
     family: Cambria, serif;
@@ -51,11 +54,49 @@ p {
   }
 }
 
-ul {
-  @include trailer(1);
+blockquote {
+  // @include adjust-font-size-to(20px);
+  // @include rhythm(0,0,0,1,20px);
   padding-left: 2em;
+  border-left: .3rem solid lighten(red, 10%);
+  p {
+    @include adjust-font-size-to(20px);
+    @include rhythm(0,0,0,1,20px);
+    font: {
+      family: Cambria, serif;
+      weight: 300;
+      style: italic;
+    }
+    color: lighten(black, 30%);
+  }
+}
+
+// blockquote {
+//   line-height: normal;
+//   @include adjust-font-size-to(20px);
+//   margin: rhythm(1, 20px) 0 rhythm(3, 20px) 0; //  3 lines above, 3 lines below
+
+//   p {
+//     @include adjust-font-size-to(20px);
+//       font: {
+//         family: Cambria, serif;
+//         weight: 300;
+//         style: italic;
+//       }
+//   }
+// }
+
+p,
+pre,
+label {
+  @include adjust-font-size-to(16px);
+  @include rhythm(1,0,0,1,16px);
+}
+
+ul, ol {
+  @include adjust-font-size-to(18px);
+  margin: 0 0 rhythm(1, 18px) 0; // 1 line below
   li {
-    list-style: disc;
     font-style: italic;
     color: lighten(black, 50%);
     font: {
@@ -65,7 +106,32 @@ ul {
   }
 }
 
+ul {
+  list-style-position: inside;
+  list-style-type: disc;
+}
+
+ol {
+  list-style-position: inside;
+  list-style-type: decimal;
+}
+
+li {
+  line-height: auto;
+}
+
 a,
 a:visited {
   color: #e54a4f;
+}
+
+strong,
+b {
+  font-weight: bold;
+}
+
+em,
+i,
+q {
+  font-style: italic;
 }
